@@ -1,7 +1,7 @@
 {
-  "name": "angular-webpack-workflow",
+  "name": "webpack-es6-angular1.x",
   "version": "1.0.0",
-  "description": "A workflow for Angular made with Webpack",
+  "description": "使用webpack建立的基于angular1.x 和es6语法的工作流",
   "scripts": {
     "build": "rimraf dist && webpack --bail --progress --profile",
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Foxandxss/angular-webpack-workflow.git"
+    "url": "https://github.com/zuiyuexuan/webpack-es6-angular1.x.git"
   },
-  "author": "Jesus Rodriguez",
+  "author": "zuiyuexuan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Foxandxss/angular-webpack-workflow/issues"
+    "url": "https://github.com/zuiyuexuan/webpack-es6-angular1.x/issues"
   },
-  "homepage": "https://github.com/Foxandxss/angular-webpack-workflow",
+  "homepage": "https://github.com/zuiyuexuan/webpack-es6-angular1.x",
   "dependencies": {
     "angular": "^1.5.0",
     "angular-animate": "^1.5.8",
