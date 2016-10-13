@@ -1,0 +1,71 @@
+
+/**
+** reset md-data-table.css
+*/
+table.md-table tbody.md-body>tr.md-row,
+table.md-table tfoot.md-foot>tr.md-row,
+table.md-table thead.md-head>tr.md-row
+{
+  height: 40px;
+}
+table.md-table thead.md-head>tr.md-row{
+  background: #f6f7f9;
+}
+
+
+
+.search-section{
+  padding-left: 20px;
+
+  md-input-container {
+    margin: 18px 0 0 0;
+
+    &.search-container{
+      margin: 6px;
+    }
+
+    .md-errors-spacer{
+      min-height: 0;
+    }
+  }
+}
+
+.table-section{
+
+
+  .md-toolbar-tools{
+    font-size: 16px;
+    height: 56px !important;
+    border-bottom: 1px solid #eee;
+
+    .md-button.md-raised{
+      color: rgba(255,255,255,0.87) !important;
+    }
+
+  }
+
+  .md-table-operator {
+    .md-icon-button {
+      margin: 0 -6px;
+      color: #717171;
+
+      &:hover{
+        color: $mainColor;
+      }
+    }
+  }
+
+  md-toolbar.md-default-theme:not(.md-menu-toolbar),
+  md-toolbar:not(.md-menu-toolbar){
+    background: #e3f2fd;
+    color: $mainColor;
+  }
+  .batch-operator{
+    font-size: 14px;
+
+    md-input-container{
+      margin-top: 12px;
+    }
+  }
+}
+
