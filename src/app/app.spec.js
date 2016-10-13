@@ -14,7 +14,7 @@ describe('app', () => {
     });
 
     it('should contain the starter url', () => {
-      expect(ctrl.url).toBe('https://github.com/preboot/angular-webpack');
+      expect(ctrl.url).toBe('ttps://github.com/zuiyuexuan/webpack-es6-angular1.x');
     });
   });
 });

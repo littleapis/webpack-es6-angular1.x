@@ -6,3 +6,6 @@ coverage
 *.iml
 .idea
 
+#log
+npm-debug.log
+
