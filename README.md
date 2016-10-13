@@ -1,4 +1,4 @@
-# angular-webpack
+# angular1.x-es6-webpack
 
 >提醒: 确保是最新的`Node.js` 和 `npm`
 
