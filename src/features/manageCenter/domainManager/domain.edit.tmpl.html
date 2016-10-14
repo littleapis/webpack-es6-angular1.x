@@ -1,7 +1,7 @@
 <div layout="column" ng-cloak ng-init="vm.$onInit()">
     <md-content>
         <form name="projectForm" style="min-width:500px;" class="form"
-              ng-submit="projectForm.$valid && submit()" novalidate>
+              ng-submit="projectForm.$valid && vm.submit()" novalidate>
             <md-toolbar class="md-default">
                 <div class="md-toolbar-tools">
                     <h2>{{vm.title}}</h2>
@@ -19,7 +19,7 @@
                 </div>
                 <div flex="66">
                     <md-input-container class="md-block">
-                        <input required name="domain" ng-model="vm.domain.domain">
+                        <input required name="domain"  aria-label="domain" ng-model="vm.domain.domain">
                         <div ng-messages="projectForm.domain.$error">
                             <div ng-message="required">必填</div>
                         </div>
@@ -33,7 +33,7 @@
                 </div>
                 <div flex="66">
                     <md-input-container class="md-block">
-                        <input required md-no-asterisk name="name"  ng-model="vm.domain.name">
+                        <input required  name="name" aria-label="name" ng-model="vm.domain.name">
                         <div ng-messages="projectForm.name.$error">
                             <div ng-message="required">必填</div>
                         </div>
@@ -47,7 +47,7 @@
                 </div>
                 <div flex="66">
                     <md-input-container class="md-block">
-                        <input required md-no-asterisk name="company"  ng-model="vm.domain.company">
+                        <input required name="company" aria-label="company" ng-model="vm.domain.company">
                         <div ng-messages="projectForm.company.$error">
                             <div ng-message="required">必填</div>
                         </div>
@@ -88,7 +88,7 @@
                 </div>
                 <div flex="66">
                     <md-input-container class="md-block radio">
-                        <textarea ng-model="vm.domain.ip">
+                        <textarea ng-model="vm.domain.ip" aria-label="ip">
 
                         </textarea>
                     </md-input-container>

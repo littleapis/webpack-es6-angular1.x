@@ -5,6 +5,7 @@ export  default class DomainController {
         this.commonService = commonService;
         this.confirmDialog = confirmDialog;
         this.$mdDialog = $mdDialog;
+        this.baseUrl ='rest/domain';
 
         this.name = '初始值';
         this.selected = [];
@@ -62,7 +63,7 @@ export  default class DomainController {
 
     getListData() {
 
-        this.promise = this.commonService.getInfoByGet('rest/domain',this.search).then((data) =>{
+        this.promise = this.commonService.query(this.baseUrl,this.search).then((data) =>{
             this.desserts = {
                 "count": data.length,
                 "data": data
