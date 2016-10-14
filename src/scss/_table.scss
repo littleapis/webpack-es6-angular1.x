@@ -65,11 +65,23 @@ table.md-table.md-row-select th.md-column:nth-child(n+3):nth-last-child(n+2){
     background: #e3f2fd;
     color: $mainColor;
   }
+
   .batch-operator{
     font-size: 14px;
 
     md-input-container{
       margin-top: 12px;
+    }
+  }
+
+  .empty-tips{
+    padding: 100px;
+    text-align: center;
+    font-size: 16px;
+    color: $mainColor;
+
+    .iconfont{
+      font-size: 32px;
     }
   }
 }

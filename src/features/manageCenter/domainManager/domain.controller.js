@@ -45,7 +45,10 @@ export  default class DomainController {
         this.getListData();
     }
 
-
+    /**
+     * 批量动作处理
+     * @param event
+     */
     batch_handle(event) {
         const operator = this.batch_operator;
         if (!operator) {
@@ -59,7 +62,7 @@ export  default class DomainController {
 
     getListData() {
 
-        this.promise = this.commonService.getInfoByGet('rest/domain').then((data) =>{
+        this.promise = this.commonService.getInfoByGet('rest/domain',this.search).then((data) =>{
             this.desserts = {
                 "count": data.length,
                 "data": data
@@ -67,6 +70,23 @@ export  default class DomainController {
         });
     }
 
+    searchData(){
+
+        const search = this.search;
+
+        //删除查询条件值为空的字段
+        for(let key in search){
+            if(search[key]==""){
+                delete search[key]
+            }
+        }
+        this.getListData();
+    }
+    /**
+     * 新增或修改弹出框
+     * @param ev
+     * @param rowData
+     */
     showDialog(ev,rowData) {
 
         if (rowData) {

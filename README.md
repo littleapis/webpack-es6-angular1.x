@@ -26,8 +26,9 @@ $ npm run api
 
 具体用法参照官方API：
  [https://github.com/typicode/json-server](https://github.com/typicode/json-server) 
- [https://github.com/marak/Faker.js/]( [https://github.com/marak/Faker.js/](https://github.com/typicode/json-server) 
-) 
+ 
+ 
+ [https://github.com/marak/Faker.js/]( [https://github.com/marak/Faker.js/]) 
  
 
 ## 发布
