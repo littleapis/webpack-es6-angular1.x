@@ -1,6 +1,5 @@
 export default class DomainEditController {
-    constructor($resource,$mdDialog, parentScope,commonService) {
-        this.restfulInterface =$resource('/rest/domain');
+    constructor($mdDialog, parentScope,commonService) {
         this.$mdDialog = $mdDialog;
         this.parentScope = parentScope;
         this.commonService =commonService;
@@ -13,8 +12,9 @@ export default class DomainEditController {
         this.title = this.formType == 'edit' ? '修改'+title : '新增'+title;
 
         if(this.formType =='edit'){
-            this.domain = parentScope.rowData;
-            this.domain.ip = parentScope.rowData.ip.split(",").join('\n');
+            let rowData = angular.copy(parentScope.rowData);
+            this.domain = rowData;
+            this.domain.ip = rowData.ip.split(",").join('\n');
         }
 
     }
@@ -23,11 +23,10 @@ export default class DomainEditController {
     submit(){
         const data = angular.copy(this.domain);
         data.ip =data.ip.replace(/\n/g,',');
-        this.commonService.postInfoByData('rest/domain',data).then((response) =>{
-            console.log(response);
+        this.commonService.save('rest/domain',data,data.id).then((response) =>{
             this.cancel();
+            this.parentScope.getListData();
         });
-
     }
 
     cancel() {

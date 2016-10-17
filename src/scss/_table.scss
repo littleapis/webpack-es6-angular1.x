@@ -52,7 +52,7 @@ table.md-table.md-row-select th.md-column:nth-child(n+3):nth-last-child(n+2){
   .md-table-operator {
     .md-icon-button {
       margin: 0 -6px;
-      color: #717171;
+      color: $linkColor;
 
       &:hover{
         color: $mainColor;

@@ -43,7 +43,7 @@ class CommonService {
         const deferred = this.$q.defer();
         let method = 'post';
 
-        if (id) {
+        if (typeof id !=='undefined') {
             url += '/' + id;
             method = 'put'
         }

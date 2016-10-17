@@ -90,6 +90,8 @@ export  default class DomainController {
      */
     showDialog(ev,rowData) {
 
+        this.formType = 'add';
+
         if (rowData) {
             this.formType = 'edit';
             this.rowData = rowData;
@@ -110,5 +112,13 @@ export  default class DomainController {
         })
     };
 
+    deleteRecord(event,id){
+        this.confirmDialog.showConfirm(event, '删除记录', '确定执行删除操作吗？').then(()=> {
+            this.commonService.delete(this.baseUrl,id).then((response)=>{
+                console.log(response)
+                this.getListData();
+            })
+        })
+    }
 
 }

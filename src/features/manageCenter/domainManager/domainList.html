@@ -80,7 +80,7 @@
                 <tr md-row>
                     <th md-column><span>客户名</span></th>
                     <th md-column><span>域名</span></th>
-                    <th md-column md-desc><span>后端IP</span></th>
+                    <th md-column><span>后端IP</span></th>
                     <th md-column><span>是否开启 WAF</span></th>
                     <th md-column><span>关联用户</span></th>
                     <th md-column><span>操作</span></th>
@@ -102,19 +102,20 @@
                             <i class="iconfont icon-edit" aria-hidden="true"></i>
                             <md-tooltip md-direction="bottom">修改</md-tooltip>
                         </md-button>
-                        <md-button class="md-icon-button" aria-label="delete">
+                        <md-button class="md-icon-button" aria-label="delete"
+                                   ng-click="domain.deleteRecord($event,dessert.id)">
                             <i class="iconfont icon-remove" aria-hidden="true"></i>
                             <md-tooltip md-direction="bottom">删除</md-tooltip>
                         </md-button>
                     </td>
                 </tr>
                 <tr ng-if="domain.desserts.data.length === 0">
-                   <td colspan="7">
-                       <div class="empty-tips">
-                           <i class="iconfont icon-no"></i>
-                           <label>没有查询到数据！</label>
-                       </div>
-                   </td>
+                    <td colspan="7">
+                        <div class="empty-tips">
+                            <i class="iconfont icon-no"></i>
+                            <label>没有查询到数据！</label>
+                        </div>
+                    </td>
                 </tr>
                 </tbody>
             </table>

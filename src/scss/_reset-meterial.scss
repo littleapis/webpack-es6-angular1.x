@@ -3,6 +3,7 @@ $fontColorDark: #58585A;
 $leftSide: #717171;
 $lineColor: #676666;
 $mainColor: #004994;
+$linkColor: #30659c;
 $checkboxSize: 16px;
 
 @mixin li-active {
@@ -29,12 +30,23 @@ a {
     color: $mainColor;
   }
 }
-md-toolbar{
+
+md-toolbar {
   min-height: 56px;
 }
 
-md-switch{
+md-switch {
   margin: 0;
+
+  &.md-checked.md-warn {
+    .md-thumb {
+      background-color: rgb(24, 171, 110);
+    }
+    .md-bar {
+      background-color: rgba(32, 162, 115, 0.5);
+    }
+  }
+
 }
 
 md-checkbox {
@@ -117,6 +129,25 @@ md-dialog {
     border-top: 1px solid #eee;
     margin-top: 20px;
     background: #f7f7f7;
+
+    .md-button {
+      line-height: 20px;
+      min-height: 32px;
+      min-width: 80px;
+      border: 1px solid #bfbebe;
+
+      &.md-ok {
+        color: #fff;
+        background: $mainColor;
+
+        &:hover {
+          background: #004aae;
+        }
+      }
+      &.md-cancel {
+        background: #fff;
+      }
+    }
   }
 
   md-toolbar {
@@ -126,29 +157,4 @@ md-dialog {
     margin-bottom: 8px;
   }
 
-}
-
-.label-text {
-  text-align: left;
-  padding-left: 3em;
-  padding-top: 10px;
-  font-size: 14px;
-
-  &.radio {
-    padding-top: 9px;
-  }
-
-  label {
-    color: #5e5e5e;
-  }
-}
-
-input[type='number'] {
-  width: 70px;
-  height: 16px;
-  margin-top: 10px;
-  border-radius: 4px;
-  border: 1px solid #cacaca;
-  padding: 2px;
-  font-size: $fontSize14;
 }
