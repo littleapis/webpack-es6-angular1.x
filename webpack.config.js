@@ -30,8 +30,7 @@ module.exports = function makeWebpackConfig() {
      * Karma will set this when it's a test build
      */
     config.entry = isTest ? {} : {
-        app: './src/app/app.js',
-        vendors: ['angular', 'angular-material','angular-ui-router']
+        app: './src/app/app.js'
     };
 
     /**

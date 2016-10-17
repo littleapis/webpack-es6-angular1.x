@@ -3,7 +3,6 @@
  */
 import angular from 'angular';
 
-
 class ConfirmDialog{
 
     constructor($mdDialog){
