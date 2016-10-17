@@ -19,6 +19,12 @@ class AppCtrl {
     constructor() {
         this.url = 'https://github.com/preboot/angular-webpack';
     }
+
+    logout(){
+        //logout
+        console.log("logout");
+    }
+
 }
 
 const MODULE_NAME = 'app';

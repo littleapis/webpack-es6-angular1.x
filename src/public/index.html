@@ -14,7 +14,7 @@
 </head>
 <body ng-cloak>
 
-<md-toolbar scroll-y-offset-element class="menu-section">
+<md-toolbar scroll-y-offset-element class="menu-section" ng-controller="AppCtrl as vm">
     <div class="md-toolbar-tools ">
         <img src="/img/logo.png" class="logo">
 
@@ -53,22 +53,12 @@
                 </a>
         </ul>
         <span flex></span>
-        <!--<span style="color: #fff;font-size: 14px;">欢迎，Admin</span>-->
-        <md-menu-bar style="display: inline-block">
-        <md-menu md-offset="0 -7">
-            <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
-                欢迎，Admin
-                <md-icon md-menu-origin md-svg-icon="call:chat"></md-icon>
-            </md-button>
-            <md-menu-content width="2">
-                <md-menu-item>
-                    <md-button ng-click="ctrl.announceClick($index)">
-                        <span md-menu-align-target>退 出</span>
-                    </md-button>
-                </md-menu-item>
-            </md-menu-content>
-        </md-menu>
-        </md-menu-bar>
+        <span class="login-user">Admin</span>
+        <a href class="logout" ng-click="vm.logout()">
+            <i class="iconfont icon-tuichu"></i>
+            <md-tooltip md-direction="bottom">退出登录</md-tooltip>
+        </a>
+
     </div>
 </md-toolbar>
 
