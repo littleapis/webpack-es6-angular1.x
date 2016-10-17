@@ -35,6 +35,17 @@
 
   label {
     color: #5e5e5e;
+    padding-left: 8px;
+    position: relative;
+
+    &.required:before{
+      content: "*";
+      color: rgb(221,44,0);
+      width: 6px;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+    }
   }
 }
 
