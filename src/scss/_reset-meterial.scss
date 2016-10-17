@@ -125,6 +125,7 @@ md-select-menu[multiple] md-option {
 }
 
 md-dialog {
+
   md-dialog-actions {
     border-top: 1px solid #eee;
     margin-top: 20px;
@@ -151,10 +152,21 @@ md-dialog {
   }
 
   md-toolbar {
+    min-height: 48px;
     background: none !important;
-    color: #797979 !important;
+    color: #545353 !important;
     border-bottom: 1px solid #eee;
     margin-bottom: 8px;
+
+    .md-toolbar-tools {
+      min-height: 50px;
+      height: 50px;
+
+      h2 {
+        font-size: 16px;
+      }
+    }
+
   }
 
 }

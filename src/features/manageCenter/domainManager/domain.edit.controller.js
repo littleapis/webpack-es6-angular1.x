@@ -11,6 +11,13 @@ export default class DomainEditController {
         this.formType = parentScope.formType;
         this.title = this.formType == 'edit' ? '修改'+title : '新增'+title;
 
+        //初始化radio、checkbox值
+        this.domain ={
+            protocol:'http',
+            waf:'disabled'
+        }
+
+
         if(this.formType =='edit'){
             let rowData = angular.copy(parentScope.rowData);
             this.domain = rowData;
