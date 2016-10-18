@@ -12,7 +12,7 @@ $ cd my-app
 $ npm install 
 ```
 
-## 启动数据 mock sever
+## 启动数据 mock server
 ```bash
 # 启动 mock 服务
 $ npm run api
