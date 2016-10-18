@@ -154,6 +154,7 @@ class CommonService {
 
 }
 
+CommonService.$inject = ['$q','$http'];
 
 export default angular.module('services.common-service', [])
     .service('commonService', CommonService)

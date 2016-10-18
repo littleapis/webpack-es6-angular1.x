@@ -45,7 +45,7 @@ module.exports = function makeWebpackConfig() {
 
         // Output path from the view of the page
         // Uses webpack-dev-server in development
-        publicPath: isProd ? '/assets/' : 'http://localhost:8080/',
+        publicPath: isProd ? '/' : 'http://localhost:8080/',
 
         // Filename for entry points
         // Only adds hash in build mode
@@ -196,7 +196,7 @@ module.exports = function makeWebpackConfig() {
             new webpack.optimize.UglifyJsPlugin(),
 
 
-            new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
+            //new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
             // Copy assets from the public folder
             // Reference: https://github.com/kevlened/copy-webpack-plugin
             new CopyWebpackPlugin([{

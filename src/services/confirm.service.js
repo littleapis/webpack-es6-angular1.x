@@ -24,6 +24,8 @@ class ConfirmDialog{
 
 }
 
+ConfirmDialog.$inject = ['$mdDialog'];
+
 export default angular.module('services.confirm-dialog', [])
     .service('confirmDialog', ConfirmDialog)
     .name;

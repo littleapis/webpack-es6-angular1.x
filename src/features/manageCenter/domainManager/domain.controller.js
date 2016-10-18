@@ -122,3 +122,5 @@ export  default class DomainController {
     }
 
 }
+
+DomainController.$inject =['commonService','confirmDialog', '$mdDialog'];
